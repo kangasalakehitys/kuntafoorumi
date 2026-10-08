@@ -17,6 +17,6 @@ window.KUNTAFOORUMI_KORTIT = [
   {
     otsikko: "Uudet palvelut",
     teksti: "Pian on luvassa uusia palveluita foorumin käyttöön. Voit myös ehdottaa keskustelupalstan kautta omia kehitystarpeitasi kuntatietopalveluista.",
-    tulossa: "Valtionosuuslaskuri (vko42)"
+    tulossa: "Valtionosuuslaskuri (vko42), väestöennustepalvelu (vko43-45)"
   }
 ];
