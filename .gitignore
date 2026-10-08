@@ -1,0 +1,16 @@
+# Clauden päätiedosto
+CLAUDE.md
+# Ajojen tulokset ja haetut aineistot (sisältävät Tilastokeskuksen maksullista dataa, ei julkaista)
+backend
+
+# Paikalliset työdokumentit
+/*.docx
+~$*
+
+# Editorit ja käyttöjärjestelmä
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+
