@@ -29,7 +29,13 @@
     } else {
       var tulossa = document.createElement("p");
       tulossa.className = "tulossa";
-      tulossa.textContent = "Tulossa";
+      var merkki = document.createElement("span");
+      merkki.className = "tulossa-merkki";
+      merkki.textContent = "Tulossa";
+      tulossa.appendChild(merkki);
+      if (tieto.tulossa) {
+        tulossa.appendChild(document.createTextNode(" " + tieto.tulossa));
+      }
       kortti.appendChild(tulossa);
     }
 

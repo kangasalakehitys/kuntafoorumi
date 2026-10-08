@@ -1,5 +1,6 @@
 // Etusivun kortit. Muokkaa, poista tai lisää olioita – sivu päivittyy automaattisesti.
-// Kentät: otsikko, teksti, nappi (napin teksti) ja url. Ilman url-kenttää kortti näytetään ilman nappia.
+// Kentät: otsikko, teksti, nappi (napin teksti) ja url. Ilman url-kenttää kortti näytetään ilman nappia
+// ja "Tulossa"-merkinnällä; valinnainen tulossa-kenttä tarkentaa, mitä on tulossa.
 window.KUNTAFOORUMI_KORTIT = [
   {
     otsikko: "Keskustelufoorumi",
@@ -15,6 +16,7 @@ window.KUNTAFOORUMI_KORTIT = [
   },
   {
     otsikko: "Uudet palvelut",
-    teksti: "Pian on luvassa uusia palveluita foorumin käyttöön. Voit myös ehdottaa keskustelupalstan kautta omia kehitystarpeitasi kuntatietopalveluista."
+    teksti: "Pian on luvassa uusia palveluita foorumin käyttöön. Voit myös ehdottaa keskustelupalstan kautta omia kehitystarpeitasi kuntatietopalveluista.",
+    tulossa: "Valtionosuuslaskuri (vko42)"
   }
 ];
