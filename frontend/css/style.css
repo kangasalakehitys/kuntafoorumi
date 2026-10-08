@@ -1,0 +1,321 @@
+/* Kuntafoorumi – yhteiset tyylit */
+
+@font-face {
+  font-family: "Kuntafoorumi Gothic";
+  src: url("../brand/fonts/centurygothic.ttf") format("truetype"), local("Century Gothic");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kuntafoorumi Gothic";
+  src: url("../brand/fonts/centurygothic_bold.ttf") format("truetype"), local("Century Gothic Bold");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --vari-paa: #DE232F;
+  --vari-keltainen: #FCB316;
+  --vari-tummansininen: #28336C;
+  --vari-oranssi: #E64925;
+  --vari-syaani: #00ADC5;
+  --vari-vihrea: #009651;
+
+  --teksti: #0d0d0d;
+  --teksti-heikko: #4a4a4a;
+  --tausta: #ffffff;
+  --tausta-alue: #f5f4f0;
+  --viiva: #d9d9d9;
+
+  --fontti: "Kuntafoorumi Gothic", "Century Gothic", "Futura", "Avenir", "Segoe UI", sans-serif;
+  --leveys: 1200px;
+  --reuna: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontti);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--teksti);
+  background: var(--tausta);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border-top: 4px solid var(--vari-paa);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--vari-tummansininen);
+  outline-offset: 2px;
+}
+
+.sisalto {
+  width: 100%;
+  max-width: var(--leveys);
+  margin: 0 auto;
+  padding: 0 var(--reuna);
+}
+
+/* Ylävalikko */
+
+.ylavalikko {
+  border-bottom: 1px solid var(--viiva);
+}
+
+.ylavalikko .sisalto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.logo strong {
+  color: var(--vari-paa);
+}
+
+.ylavalikko nav a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.ylavalikko nav a:hover,
+.ylavalikko nav a[aria-current="page"] {
+  border-bottom-color: var(--vari-paa);
+}
+
+/* Pääsisältö */
+
+main {
+  flex: 1;
+}
+
+.intro {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px var(--reuna) 48px;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.intro p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--teksti-heikko);
+}
+
+.osio-otsikko {
+  margin: 0 0 24px;
+  padding-top: 12px;
+  border-top: 1px solid var(--teksti);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Kortit */
+
+.kortit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin: 0 0 72px;
+  padding: 0;
+  list-style: none;
+}
+
+.kortti {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+  border-top: 4px solid var(--korttivari, var(--vari-paa));
+}
+
+.kortti h2 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.kortti p {
+  margin: 0 0 24px;
+  color: var(--teksti-heikko);
+  flex: 1;
+}
+
+.kortti .tulossa {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teksti-heikko);
+  flex: 0;
+}
+
+.nappi {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 12px 20px;
+  background: var(--vari-paa);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.nappi:hover {
+  background: #b81b26;
+}
+
+/* Artikkeli (alasivut) */
+
+.artikkeli {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px var(--reuna) 72px;
+}
+
+.artikkeli h1 {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  line-height: 1.2;
+}
+
+.artikkeli h2 {
+  margin: 36px 0 8px;
+  font-size: 1.3rem;
+}
+
+.ingressi {
+  font-size: 1.15rem;
+  color: var(--teksti-heikko);
+}
+
+.jaa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0 32px;
+  padding: 12px 0;
+  border-top: 1px solid var(--viiva);
+  border-bottom: 1px solid var(--viiva);
+}
+
+.jaa-ilmoitus {
+  font-size: 0.9rem;
+  color: var(--vari-vihrea);
+}
+
+/* Alavalikko */
+
+.alavalikko {
+  background: var(--tausta-alue);
+  border-top: 1px solid var(--viiva);
+}
+
+.alavalikko .sisalto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.alavalikko p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--teksti-heikko);
+}
+
+.some {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.some a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--teksti);
+  border: 1px solid var(--viiva);
+  background: var(--tausta);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.some a:hover {
+  color: var(--vari-paa);
+  border-color: var(--vari-paa);
+}
+
+.some svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.piilotettu {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .intro {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .kortit {
+    gap: 28px;
+  }
+}
