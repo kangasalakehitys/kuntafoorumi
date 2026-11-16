@@ -27,8 +27,9 @@ window.KUNTAFOORUMI_KORTIT = [
     url: "https://kangasalakehitys.github.io/hytelaskuri/"
   },
   {
-    otsikko: "Uudet palvelut",
-    teksti: "Pian on luvassa uusia palveluita foorumin käyttöön. Voit myös ehdottaa keskustelupalstan kautta omia kehitystarpeitasi kuntatietopalveluista.",
-    tulossa: "väestöennustepalvelu (vko43-45)"
+    otsikko: "Väestöennusteet",
+    teksti: "Väestöennustepalvelun avulla voi laskea kuntasi ennusteen, joko kunta tai aluetasolla.",
+    nappi: "Väestöennusteet",
+    url: "https://kangasalakehitys.github.io/ennuste"
   }
 ];
